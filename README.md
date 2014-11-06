@@ -25,16 +25,16 @@ source<br>
 ## **三、使用** ##
 
 先编译引擎
-#+BEGIN_EXAMPLE
+`
   $ cd ChessQ_Magic/harmless
   $ make
-#+END_EXAMPLE
+`
 
 运行
-#+BEGIN_EXAMPLE
+`
   $ cd ChessQ_Magic/source
   $ python ChessQ.py
-#+END_EXAMPLE
+`
 
 
 
