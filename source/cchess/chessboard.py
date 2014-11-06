@@ -25,6 +25,10 @@ from chessman import *
 #-----------------------------------------------------#
 
 class Chessboard(object):
+    """
+    对棋盘各种操作
+    """
+
     def __init__(self):
         
         self.clear()
