@@ -10,6 +10,7 @@ ChessQ是一个中国象棋程序。目前功能还很简单，目标是做个�
 
 ## **一、工程目录结构** ##
 根目录<br>
+>├ harmless --harmless引擎 <br>
 >├ source --源代码 <br>
 >├ LICENCE.txt --开源协议 <br>
 >├ README.md --项目信息 <br>
@@ -20,6 +21,20 @@ source<br>
 >├ cchess --界面操作<br>
 >├ images --图片资源文件<br>
 >├ sounds --声音<br>
+
+## **三、使用** ##
+
+先编译引擎
+#+BEGIN_EXAMPLE
+  $ cd ChessQ_Magic/harmless
+  $ make
+#+END_EXAMPLE
+
+运行
+#+BEGIN_EXAMPLE
+  $ cd ChessQ_Magic/source
+  $ python ChessQ.py
+#+END_EXAMPLE
 
 
 

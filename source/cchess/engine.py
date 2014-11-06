@@ -22,10 +22,13 @@ import sys,time
 from subprocess import PIPE, Popen
 from threading import Thread
 from Queue import Queue, Empty
+import logging
 
 from common import *
 
 #-----------------------------------------------------#
+_logger = logging.getLogger(__name__)
+
 
 #Engine status   
 (BOOTING, READY, WAITING, INFO_MOVE, MOVE, DEAD, UNKNOWN) = range(7)
@@ -57,6 +60,8 @@ ON_POSIX = 'posix' in sys.builtin_module_names
 #-----------------------------------------------------#
 
 class UcciEngine(Thread):
+    """UCCI引擎对象"""
+
     def __init__(self, engine_name):
         super(UcciEngine, self).__init__()
         self.engine_name = engine_name
@@ -122,15 +127,17 @@ class UcciEngine(Thread):
                     #print  move_str
     
     def load(self):
+        # _logger.info("-------------------->加载引擎")
         
         try:
-            self.pipe = Popen(self.engine_name, stdin=PIPE, stdout=PIPE)#, close_fds=ON_POSIX)
+            self.pipe = Popen(self.engine_name, stdin=PIPE, stdout=PIPE) #, close_fds=ON_POSIX)
         except OSError:
+            _logger.info("-------------------->加载引擎错误")
             return False
-            
+
         time.sleep(0.5)
         
-        (self.pin, self.pout) = (self.pipe.stdin,self.pipe.stdout)
+        (self.pin, self.pout) = (self.pipe.stdin, self.pipe.stdout)
         
         self.move_queue = Queue()
         self.move_info_queue = Queue()

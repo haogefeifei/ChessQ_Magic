@@ -34,9 +34,10 @@ from QChessboard import *
 from QChessWidgets import *
 
 from QChessboardEditDlg import *
-
+import logging
 APP_NAME = u"ChessQ 中国象棋"
 
+logging.basicConfig(level = logging.INFO)
 #-----------------------------------------------------#       
 
 class MainWindow(QMainWindow):
@@ -54,10 +55,10 @@ class MainWindow(QMainWindow):
         self.createToolBars()
         self.createStatusBar()
         self.createMainWidgets()
-        
-        self.engine_path = "engines/eleeye/eleeye"
+
+        #self.engine_path = "engines/eleeye/eleeye"
         #self.engine_path = "engines/bitstronger/bitstronger"
-        #self.engine_path = "engines/harmless/harmless"
+        self.engine_path = "../harmless/harmless" #引擎路径
         
         self.engine = UcciEngine(self.engine_path)
         if not self.engine.load():

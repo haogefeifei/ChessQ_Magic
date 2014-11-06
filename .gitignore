@@ -1,2 +1,5 @@
 *.pyc
 /.idea/
+*.o
+/harmless/harmless
+harmless.log
