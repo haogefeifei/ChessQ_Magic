@@ -14,12 +14,6 @@ ChessQ是一个中国象棋程序。目前功能还很简单，目标是做个�
 >├ LICENCE.txt --开源协议 <br>
 >├ README.md --项目信息 <br>
 
-目录简要解释<br>
-根目录<br>
->├ source --源代码 <br>
->├ LICENCE.txt --开源协议 <br>
->├ README.md --项目信息 <br>
-
 ## **二、源代码目录结构** ##
 source<br>
 >├ _eric4project  <br>
