@@ -25,16 +25,13 @@ source<br>
 ## **三、使用** ##
 
 先编译引擎
-`
-  $ cd ChessQ_Magic/harmless
-  $ make
-`
+    $ cd ChessQ_Magic/harmless
+    $ make
 
 运行
-`
-  $ cd ChessQ_Magic/source
-  $ python ChessQ.py
-`
+    $ cd ChessQ_Magic/source
+    $ python ChessQ.py
+
 
 
 
